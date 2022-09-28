@@ -10,10 +10,8 @@ export function authReducer(state = initialState, action) {
             return {
                 user: action.payload
             }
-            break;
     
         default:
             return state
-            break;
     }
 }

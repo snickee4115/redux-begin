@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 
 function App() {
 
-  const { user } = useSelector((state)=>state.auth)
+  // const { user } = useSelector((state)=>state.auth)
 
   function UnAuthApp() {
     return (
@@ -31,7 +31,8 @@ function App() {
   return (
     <div className='App'>
       <Nav />
-      {!user ? <UnAuthApp/> : <AuthApp/>}
+      {/* {!user ? <UnAuthApp/> : <AuthApp/>} */}
+      <AuthApp/>
     </div>
   )
 }

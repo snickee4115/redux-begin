@@ -19,7 +19,7 @@ export function signin(email, password) {
         const foundUser = users.find(
             (user) => user.email === email && user.password === password
         )
-
+            console.log(foundUser);
         setTimeout(() => {
             if (foundUser) {
                 resolve(foundUser)

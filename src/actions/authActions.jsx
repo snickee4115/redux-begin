@@ -10,8 +10,8 @@ export function setAuth(user) {
     }
 }
 
-export function fetchAuthAsync(email, password) {
-    return async function (dispatch, getState) {
+export async function fetchAuthAsync(dispatch, email, password) {
+ 
         try {
             dispatch(startFetch())
 
@@ -27,5 +27,5 @@ export function fetchAuthAsync(email, password) {
             dispatch(errorFetch(error))
             dispatch(endFetch())
         }
-    }
+    
 }

@@ -6,7 +6,7 @@ import { setAuth } from '../actions/authActions';
 export default function Nav() {
 
   const cart = useSelector((state) => state.cart);
-  const { user } = useSelector(state => state.auth)
+  // const { user } = useSelector(state => state.auth)
 
   const dispatch = useDispatch();
   
@@ -18,7 +18,7 @@ export default function Nav() {
           <li className='nav-list'>
             <Link to='/'>Products</Link>
           </li>
-          {user && <li className='nav-list'>
+          {<li className='nav-list'>
             <Link to='/cart'>
               Cart
               <span className='cart-num'>
@@ -27,7 +27,7 @@ export default function Nav() {
             </Link>
           </li>}
           <li className='nav-list'>
-            {user ? <button onClick={()=>dispatch(setAuth(null))}>Sign out</button> :<Link to='/signin'>Sign in</Link>}
+            {/* {user ? <button onClick={()=>dispatch(setAuth(null))}>Sign out</button> :<Link to='/signin'>Sign in</Link>} */}
           </li>
         </ul>
       </div>
