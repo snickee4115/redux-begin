@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
-import { addToCart } from '../slices/cartSlice';
+import { addToCart } from '../store/slices/cartSlice';
 // import { addTocart } from '../actions/cartAction'
 
 export default function Item({ product }) {

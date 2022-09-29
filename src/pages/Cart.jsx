@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteCart } from '../slices/cartSlice'
+import { deleteCart } from '../store/slices/cartSlice'
 
 
 export default function Cart() {

@@ -1,23 +1,23 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchAuthAsync } from '../actions/authActions'
+import { signinAsync } from '../store/slices/authSlice'
 
 export default function Signin() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const dispatch = useDispatch()
-  // const { loading, error } = useSelector(state => state.status)
+  const { loading, error } = useSelector(state => state.auth)
 
 
   return (
     <div className='form'>
       <input type="text" name='username' value={email} onChange={e => setEmail(e.target.value)} />
       <input type="password" name='password' value={password} onChange={e => setPassword(e.target.value)} />
-      {/* <button onClick={() => fetchAuthAsync(dispatch, email, password)}>
+      <button onClick={() => dispatch(signinAsync({ email, password }))}>
         {loading ? "Loading..." : "Submit"}
-      </button> */}
-      {/* {error && <p style={{ color: 'red', fontSize: '12px' }}>{error}</p>} */}
+      </button>
+      {error && <p style={{ color: 'red', fontSize: '12px' }}>{error}</p>}
     </div>
   )
 }
